@@ -6,7 +6,6 @@ function Search() {
   const [data, setData] = useState("");
 
   const getData = (e) => {
-    //console.log(e.target.value)
     setData(e.target.value);
   };
 
