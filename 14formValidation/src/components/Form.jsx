@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Form() {
   const [name, setName] = useState();
@@ -10,12 +12,12 @@ function Form() {
     e.preventDefault();
     if (name && email && password && confirmPass) {
       if (password === confirmPass) {
-        alert("Sign Up Successfully");
+        toast.success("Sign Up Successfully");
       } else {
-        alert("ERR : Password & ConfirmPassword Must be SAME !");
+        toast.error("ERR : Password & ConfirmPassword Must be SAME !");
       }
     } else {
-      alert("All Fields are Mandatory");
+      toast.error("All Fields are Mandatory");
     }
   };
 
